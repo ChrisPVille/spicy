@@ -51,8 +51,8 @@ SECTIONS {
     {{end}}
     : AT(_RomSize)
     {
-      _{{.Name}}SegmentStart = .;
       . = ALIGN(0x10);
+      _{{.Name}}SegmentStart = .;
       _{{.Name}}SegmentTextStart = .;
       {{range .Includes -}}
         {{.}} (.text)
